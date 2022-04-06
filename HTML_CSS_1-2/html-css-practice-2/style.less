@@ -1,0 +1,370 @@
+@color04: rgba(255, 255, 255, 0.4);
+@color08: rgba(255, 255, 255, 0.8);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    font-style: normal;
+    background: #1C1C1C;
+    margin: 0;
+    height: 100%;
+}
+
+.header1 {
+    text-align: center;
+    margin-top: 80px;
+} 
+
+.footer1 {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.logo {
+    height: 28px;
+    width: 148px;
+}
+
+.copyright {
+    bottom: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: @color04;
+}
+
+.searchLink {
+    display: none;
+}
+
+.cross {
+    display: none;
+}
+
+.searchFounding {
+    display: none;
+}
+
+.searchNotFound {
+    display: none;
+}
+
+.searchInput {
+    height: 36px;
+    width: 446px;
+    margin-top: 72px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: @color04;
+    background: url("./img/UnionsearchIcon.png") no-repeat;
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.searchForm {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 74px;
+    width: 628px;
+    left: 406px;
+    margin-top: 54px;
+    border-radius: 2px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+
+.search_active {
+    .wrapper {
+        margin-left: 80px;
+        margin-right: 80px;
+        align-items: stretch
+    }
+    .searchForm {
+        display: flex;
+        width: auto;
+        align-items: flex-end;
+        margin-top: 54px;
+        border-radius: 2px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: yellow;
+        justify-content: space-between;
+    }
+    .searchLink {
+        margin-left: -8px;
+        margin-top: 22px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .linkTall {
+        display: none;
+    }
+    .cross {
+        display: block;
+        background-color: #1C1C1C;
+        outline: none;
+        border: none;
+        margin-bottom: 10px;
+    }
+    
+    .cross:hover {
+        background-color: #1C1C1C;
+        outline: none;
+        border: none;
+        margin-bottom: 10px;
+        filter: brightness(120%);
+    }
+}
+
+.search_more_history .linkTall {
+    display: flex;
+}
+
+.search_not_found .searchNotFound {
+    display: flex;
+    width: 604px;
+    height: 48px;
+    margin-top: 100px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.searchLink a {
+    background: @color08;
+    height: 36px;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 8px;
+} 
+
+.searchLink a:hover {
+    background-color: #FFFFFF;
+}
+
+.search_live .searchFounding {
+    display: block;
+}
+
+.search_live .searchNotFound {
+    display: none;
+}
+
+.search_live .searchFound {
+        width: 309px;
+        height: 48px;
+        margin-top: 100px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 48px;
+        color: #FFFFFF;
+}
+
+.search_live {
+    .filmsList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: -24px;
+        margin-top: 12px;
+        margin-bottom: 80px;
+    }
+
+    .filmCard {
+        width: 25%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .readyCard {
+        position: relative;
+        height: 454px;
+        border-radius: 12px;
+    }
+
+    .readyCard:hover:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: transparent;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.43%, rgba(0, 0, 0, 0.8) 72.41%);
+        border-radius: 12px;
+    }
+
+    .notCompleteCard {
+        position: relative;
+        height: 454px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .loadingCard {
+        position: relative;
+        height: 454px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .loadingCard .skeleton {
+    display: flex;
+    }
+
+    .loadingCard .info {
+    display: none;
+    }
+
+
+    .readyCard .image {
+        border-radius: 15px;
+        display: block;
+    }
+
+    .readyCard .name {
+        color: white;
+    }
+
+    .readyCard .meta {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .image {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+
+    .name {
+    margin: 20px;
+    max-width: 262px;
+    max-height: 36px;
+    margin-top: 342px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    overflow: auto;
+    color: rgba(255, 255, 255, 0.24);
+    }
+
+    .meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgba(255, 255, 255, 0.24);
+    }
+
+    .skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 68px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    }
+
+    .line {
+    height: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    }
+
+    .line + .line {
+    margin-top: 8px;
+    }
+
+    .line_short {
+    width: 60%;
+    }
+    
+}
+
+.scroll {
+    .searchForm {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: -7px;
+        margin-bottom: -10px;
+        border-radius: 2px;
+        border-bottom-width: 2px; 
+        border-bottom-style: solid;
+        border-bottom-color: white;
+        background-color: #1C1C1C;
+        opacity: 0.8;
+        z-index: 2;
+    } 
+
+    .searchLink {
+        display: none;
+    }
+
+    .searchInput {
+        width: 100%;
+        margin-left: 80px;
+    }
+    .cross {
+        padding-right: 80px;
+    }
+}
